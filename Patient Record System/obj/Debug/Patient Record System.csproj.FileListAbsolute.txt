@@ -1,0 +1,9 @@
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\bin\Debug\Patient Record System.exe.config
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\bin\Debug\Patient Record System.exe
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\bin\Debug\Patient Record System.pdb
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient Record System.csprojAssemblyReference.cache
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient_Record_System.Properties.Resources.resources
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient Record System.csproj.GenerateResource.cache
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient Record System.exe
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient Record System.pdb
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient_Record_System.Login.resources
