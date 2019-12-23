@@ -20,7 +20,7 @@ namespace Patient_Record_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\saad\Documents\DB.mdf;Integrated Security=True;Connect Timeout=30";
+            string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\DB.mdf;Integrated Security=True;Connect Timeout=30";
 
             if (username.Text == "" || password.Text == "")
             {

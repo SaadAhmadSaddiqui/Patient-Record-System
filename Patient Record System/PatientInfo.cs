@@ -14,7 +14,7 @@ namespace Patient_Record_System
 {
     public partial class PatientInfo : Form
     {
-        SqlConnection nCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\saad\Documents\DB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection nCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\DB.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PatientInfo()
         {
