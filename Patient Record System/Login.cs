@@ -30,11 +30,12 @@ namespace Patient_Record_System
             try
             {
                 //Create SqlConnection
+
                 SqlConnection con = new SqlConnection(cs);
+                con.Open();
                 SqlCommand cmd = new SqlCommand("Select * from Login where Username=@username and Password=@password", con);
                 cmd.Parameters.AddWithValue("@username", username.Text);
-                cmd.Parameters.AddWithValue("@password", password.Text);
-                con.Open();
+                cmd.Parameters.AddWithValue("@password", password.Text);   
                 SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adapt.Fill(ds);
@@ -44,8 +45,9 @@ namespace Patient_Record_System
                 if (count == 1)
                 {
                     MessageBox.Show("Login Successful!");
+                    PatientInfo pi = new PatientInfo();
+                    pi.Show();
                     this.Hide();
-
                 }
                 else
                 {
