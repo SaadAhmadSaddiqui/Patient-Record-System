@@ -22,9 +22,6 @@ namespace Patient_Record_System
         }
 
         int patientID = 0;
-        int visitID = 0;
-        //DateTimePicker datePicker;
-        //DateTimePicker timePicker;
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -52,17 +49,10 @@ namespace Patient_Record_System
                 // Details
 
                 nCon.Open();
-                int _visitID = 0;
 
                 SqlCommand nCmd = nCon.CreateCommand();
                 nCmd.CommandType = CommandType.Text;
                 nCmd.CommandText = "INSERT INTO Visit VALUES ('" + _PaitentID + "', '" + pVisitDate.Value.ToString() + "', '" + pVisitTime.Value.ToString() + "')";
-                //nCmd.CommandType = CommandType.StoredProcedure;
-                //nCmd.Parameters.AddWithValue("@vID", visitID);
-                //nCmd.Parameters.AddWithValue("@pID", _PaitentID);
-                //nCmd.Parameters.AddWithValue("@vDate", pVisitDate.Value.ToString());
-                //nCmd.Parameters.AddWithValue("@vTime", pVisitTime.Value.ToShortTimeString());
-                //_visitID = Convert.ToInt32(nCmd.ExecuteScalar());
                 nCmd.ExecuteNonQuery();
                 nCon.Close();
 
@@ -76,19 +66,6 @@ namespace Patient_Record_System
             disp_Visits();
             disp_Patient();
 
-        }
-
-        bool Validation()
-        {
-            bool isValid = true;
-            if (pName.Text.Trim() == "")
-            {
-                MessageBox.Show("Enter Patient Details");
-                isValid = false;
-            }
-
-            //add more validations if needed
-            return isValid;
         }
 
         public void disp_Patient()
@@ -127,28 +104,6 @@ namespace Patient_Record_System
 
         private void PatientInfo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'visitsDataSet.Visit' table. You can move, or remove it, as needed.
-            // Date Picker for visit.
-            //datePicker = new DateTimePicker
-            //{
-            //    Format = DateTimePickerFormat.Short,
-            //    Visible = false,
-            //    Width = 100
-            //};
-            //dgvVisits.Controls.Add(datePicker);
-            //datePicker.ValueChanged += this.dtpVisit_ValueChanged;
-
-            ////// Time picker for visit
-            //timePicker = new DateTimePicker
-            //{
-            //    Format = DateTimePickerFormat.Time,
-            //    Visible = false,
-            //    Width = 100
-            //};
-            //dgvVisits.Controls.Add(timePicker);
-            //timePicker.ValueChanged += this.dtpVisit1_ValueChanged;
-            //dgvVisits.CellBeginEdit += this.dgvVisits_CellBeginEdit;
-            //dgvVisits.CellEndEdit += this.dgvVisits_CellEndEdit;
             BloodGroupComboFill();
             disp_Patient();
         }
@@ -258,10 +213,10 @@ namespace Patient_Record_System
             }
         }
 
-        private void dgvVisits_UserDeletedRow(object sender, DataGridViewRowCancelEventArgs e)
+        private void dgvVisits_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             DataGridViewRow dgvRow = dgvVisits.CurrentRow;
-            if(dgvRow.Cells["dgvtxtVistID"].Value != DBNull.Value)
+            if (dgvRow.Cells["dgvtxtVisitID"].Value != DBNull.Value)
             {
                 if (MessageBox.Show("Do you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -270,6 +225,7 @@ namespace Patient_Record_System
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@vID", Convert.ToInt32(dgvRow.Cells["dgvtxtVisitID"].Value));
                     cmd.ExecuteNonQuery();
+                    nCon.Close();
                 }
                 else
                 {
@@ -277,82 +233,5 @@ namespace Patient_Record_System
                 }
             }
         }
-
-
-        //    private void dgvVisits_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        //    {
-        //        try
-        //        {
-        //            if ((dgvVisits.Focused) && (dgvVisits.CurrentCell.ColumnIndex == 1))
-        //            {
-        //                datePicker.Location = dgvVisits.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).Location;
-        //                datePicker.Visible = true;
-        //                if (dgvVisits.CurrentCell.Value != DBNull.Value)
-        //                {
-        //                    datePicker.Value = (DateTime)dgvVisits.CurrentCell.Value;
-        //                }
-        //                else
-        //                {
-        //                    datePicker.Value = DateTime.Today;
-        //                }
-        //            }
-        //            if ((dgvVisits.Focused) && (dgvVisits.CurrentCell.ColumnIndex == 2))
-        //            {
-        //                timePicker.Location = dgvVisits.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).Location;
-        //                timePicker.Visible = true;
-        //                if (dgvVisits.CurrentCell.Value != DBNull.Value)
-        //                {
-        //                    timePicker.Value = (DateTime)dgvVisits.CurrentCell.Value;
-        //                }
-        //                else
-        //                {
-        //                    timePicker.Value = DateTime.Now;
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-
-        //            MessageBox.Show(ex.Message);
-        //        }
-        //    }
-
-        //    private void dgvVisits_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        //    {
-        //        try
-        //        {
-        //            if ((dgvVisits.Focused) && (dgvVisits.CurrentCell.ColumnIndex == 1))
-        //            {
-        //                dgvVisits.CurrentCell.Value = datePicker.Value.Date;
-        //            }
-        //            if ((dgvVisits.Focused) && (dgvVisits.CurrentCell.ColumnIndex == 2))
-        //            {
-        //                timePicker.Format = DateTimePickerFormat.Time;
-        //                timePicker.ShowUpDown = true;
-        //            }
-
-        //        }
-        //        catch (Exception ex)
-        //        {
-
-        //            MessageBox.Show(ex.Message);
-        //        }
-        //    }
-
-        //    private void dtpVisit_ValueChanged(object sender, EventArgs e)
-        //    {
-        //        dgvVisits.CurrentCell.Value = datePicker.Text;
-
-
-        //    }
-
-        //    private void dtpVisit1_ValueChanged(object sender, EventArgs e)
-        //    {
-
-        //        dgvVisits.CurrentCell.Value = timePicker.Text;
-
-        //    }
-        //}
-
     }
 }

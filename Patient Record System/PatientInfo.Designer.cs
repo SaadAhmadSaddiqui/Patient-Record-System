@@ -198,7 +198,6 @@
             // dgvVisits
             // 
             this.dgvVisits.AllowUserToAddRows = false;
-            this.dgvVisits.AllowUserToDeleteRows = false;
             this.dgvVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisits.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvtxtVisitID,
@@ -209,6 +208,7 @@
             this.dgvVisits.ReadOnly = true;
             this.dgvVisits.Size = new System.Drawing.Size(402, 228);
             this.dgvVisits.TabIndex = 27;
+            this.dgvVisits.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvVisits_UserDeletingRow);
             // 
             // dgvtxtVisitID
             // 
