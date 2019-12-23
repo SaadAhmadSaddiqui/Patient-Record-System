@@ -198,13 +198,14 @@ namespace Patient_Record_System
         {
             nCon.Open();
 
-            SqlCommand cmd = new SqlCommand("DeleteEmployee", nCon);
+            SqlCommand cmd = new SqlCommand("PatientDelete", nCon);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@pID", patientID);
             
             cmd.ExecuteNonQuery();
 
             nCon.Close();
+            Clear();
             disp_Patient();
         }
 
