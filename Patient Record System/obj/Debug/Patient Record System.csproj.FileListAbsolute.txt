@@ -10,3 +10,5 @@ C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patien
 C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient_Record_System.PatientInfo.resources
 C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\bin\Debug\DB.mdf
 C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\bin\Debug\DB_log.ldf
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient_Record_System.HomePage.resources
+C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\obj\Debug\Patient_Record_System.registerForm.resources

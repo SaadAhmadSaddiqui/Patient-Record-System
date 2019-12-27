@@ -14,6 +14,8 @@ namespace Patient_Record_System
 {
     public partial class PatientInfo : Form
     {
+
+        public HomePage hp;
         SqlConnection nCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record System\Patient Record System\DB.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PatientInfo()
@@ -232,6 +234,12 @@ namespace Patient_Record_System
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void lblHomePage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            hp.Show();
+            this.Close();
         }
     }
 }

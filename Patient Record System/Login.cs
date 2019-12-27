@@ -13,6 +13,7 @@ namespace Patient_Record_System
 {
     public partial class Login : Form
     {
+        public HomePage hp;
         public Login()
         {
             InitializeComponent();
@@ -45,8 +46,10 @@ namespace Patient_Record_System
                 if (count == 1)
                 {
                     MessageBox.Show("Login Successful!");
-                    PatientInfo pi = new PatientInfo();
-                    pi.Show();
+                    HomePage home = new HomePage();
+                    home.Show();
+                    home.label2.Text = "Using as: " + username.Text + "";
+                    home.pInfoToolStripMenuItem.Enabled = true;
                     this.Hide();
                 }
                 else
@@ -58,6 +61,12 @@ namespace Patient_Record_System
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void lblHomePage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            hp.Show();
+            this.Close();
         }
     }
 }

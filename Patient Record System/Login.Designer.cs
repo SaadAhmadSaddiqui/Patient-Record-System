@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblHomePage = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // username
@@ -78,11 +79,24 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
+            // lblHomePage
+            // 
+            this.lblHomePage.AutoSize = true;
+            this.lblHomePage.LinkColor = System.Drawing.Color.Black;
+            this.lblHomePage.Location = new System.Drawing.Point(44, 239);
+            this.lblHomePage.Name = "lblHomePage";
+            this.lblHomePage.Size = new System.Drawing.Size(63, 13);
+            this.lblHomePage.TabIndex = 9;
+            this.lblHomePage.TabStop = true;
+            this.lblHomePage.Text = "Home Page";
+            this.lblHomePage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblHomePage_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 261);
+            this.Controls.Add(this.lblHomePage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -103,6 +117,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel lblHomePage;
     }
 }
 

@@ -67,6 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.lblHomePage = new System.Windows.Forms.LinkLabel();
             this.tbpPatientRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.tbpPatientDetails.SuspendLayout();
@@ -135,6 +136,7 @@
             // 
             this.tbpPatientDetails.AutoScroll = true;
             this.tbpPatientDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
+            this.tbpPatientDetails.Controls.Add(this.lblHomePage);
             this.tbpPatientDetails.Controls.Add(this.grbAppointments);
             this.tbpPatientDetails.Controls.Add(this.dgvVisits);
             this.tbpPatientDetails.Controls.Add(this.panel1);
@@ -606,6 +608,18 @@
             this.tabControl.Size = new System.Drawing.Size(887, 629);
             this.tabControl.TabIndex = 36;
             // 
+            // lblHomePage
+            // 
+            this.lblHomePage.AutoSize = true;
+            this.lblHomePage.LinkColor = System.Drawing.Color.Black;
+            this.lblHomePage.Location = new System.Drawing.Point(25, 566);
+            this.lblHomePage.Name = "lblHomePage";
+            this.lblHomePage.Size = new System.Drawing.Size(81, 16);
+            this.lblHomePage.TabIndex = 35;
+            this.lblHomePage.TabStop = true;
+            this.lblHomePage.Text = "Home Page";
+            this.lblHomePage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblHomePage_LinkClicked);
+            // 
             // PatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +635,7 @@
             this.tbpPatientRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).EndInit();
             this.tbpPatientDetails.ResumeLayout(false);
+            this.tbpPatientDetails.PerformLayout();
             this.grbAppointments.ResumeLayout(false);
             this.grbAppointments.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisits)).EndInit();
@@ -673,5 +688,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.LinkLabel lblHomePage;
     }
 }
