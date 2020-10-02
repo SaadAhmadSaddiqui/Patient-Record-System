@@ -44,13 +44,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.item2ToolStripMenuItem,
@@ -64,16 +65,16 @@
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saadToolStripMenuItem,
             this.meherToolStripMenuItem});
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 20);
             this.toolStripMenuItem1.Text = "About Us";
             // 
-            // usmanToolStripMenuItem
+            // saadToolStripMenuItem
             // 
             this.saadToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.saadToolStripMenuItem.ForeColor = System.Drawing.Color.ForestGreen;
@@ -82,7 +83,7 @@
             this.saadToolStripMenuItem.Text = "Saad";
             this.saadToolStripMenuItem.Click += new System.EventHandler(this.saadToolStripMenuItem_Click);
             // 
-            // amalToolStripMenuItem
+            // meherToolStripMenuItem
             // 
             this.meherToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.meherToolStripMenuItem.ForeColor = System.Drawing.Color.ForestGreen;
@@ -96,10 +97,10 @@
             this.item2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem,
             this.registerToolStripMenuItem1});
-            this.item2ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.item2ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.item2ToolStripMenuItem.Name = "item2ToolStripMenuItem";
-            this.item2ToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.item2ToolStripMenuItem.Text = "Sign In or Register";
+            this.item2ToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.item2ToolStripMenuItem.Text = "Login or Register";
             // 
             // registerToolStripMenuItem
             // 
@@ -117,7 +118,7 @@
             // 
             // pInfoToolStripMenuItem
             // 
-            this.pInfoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pInfoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.pInfoToolStripMenuItem.Name = "pInfoToolStripMenuItem";
             this.pInfoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.pInfoToolStripMenuItem.Text = "Patient Records";
@@ -125,7 +126,7 @@
             // 
             // logOutToolStripMenuItem
             // 
-            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.logOutToolStripMenuItem.Text = "Log out";
@@ -133,7 +134,7 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Black;
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 485);
@@ -157,15 +158,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(167, 490);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(272, 488);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(485, 13);
+            this.label1.Size = new System.Drawing.Size(320, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Copyrights ©  Saad Ahmad Saddiqui: Created as a project for ISD course Mrs. Rukhs" +
-    "handa - Copying is strictly prohibited";
+            this.label1.Text = "Copyrights © Created by  Saad Ahmad Saddiqui && Meher-Un-Nisa";
             // 
             // label2
             // 
@@ -177,6 +177,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "No User Active";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(256, 242);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(336, 44);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Patient Record System";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,10 +195,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 507);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -218,7 +230,8 @@
         private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

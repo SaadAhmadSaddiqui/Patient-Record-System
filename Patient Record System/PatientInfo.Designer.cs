@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientInfo));
             this.tbpPatientRegister = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPatient = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtNameSearch = new System.Windows.Forms.TextBox();
             this.tbpPatientDetails = new System.Windows.Forms.TabPage();
+            this.lblHomePage = new System.Windows.Forms.LinkLabel();
             this.grbAppointments = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,7 +69,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.lblHomePage = new System.Windows.Forms.LinkLabel();
             this.tbpPatientRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.tbpPatientDetails.SuspendLayout();
@@ -147,6 +148,18 @@
             this.tbpPatientDetails.Size = new System.Drawing.Size(879, 600);
             this.tbpPatientDetails.TabIndex = 0;
             this.tbpPatientDetails.Text = "Patient Details";
+            // 
+            // lblHomePage
+            // 
+            this.lblHomePage.AutoSize = true;
+            this.lblHomePage.LinkColor = System.Drawing.Color.Black;
+            this.lblHomePage.Location = new System.Drawing.Point(25, 566);
+            this.lblHomePage.Name = "lblHomePage";
+            this.lblHomePage.Size = new System.Drawing.Size(81, 16);
+            this.lblHomePage.TabIndex = 35;
+            this.lblHomePage.TabStop = true;
+            this.lblHomePage.Text = "Home Page";
+            this.lblHomePage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblHomePage_LinkClicked);
             // 
             // grbAppointments
             // 
@@ -608,18 +621,6 @@
             this.tabControl.Size = new System.Drawing.Size(887, 629);
             this.tabControl.TabIndex = 36;
             // 
-            // lblHomePage
-            // 
-            this.lblHomePage.AutoSize = true;
-            this.lblHomePage.LinkColor = System.Drawing.Color.Black;
-            this.lblHomePage.Location = new System.Drawing.Point(25, 566);
-            this.lblHomePage.Name = "lblHomePage";
-            this.lblHomePage.Size = new System.Drawing.Size(81, 16);
-            this.lblHomePage.TabIndex = 35;
-            this.lblHomePage.TabStop = true;
-            this.lblHomePage.Text = "Home Page";
-            this.lblHomePage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblHomePage_LinkClicked);
-            // 
             // PatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,6 +628,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(911, 653);
             this.Controls.Add(this.tabControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PatientInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient Deets";

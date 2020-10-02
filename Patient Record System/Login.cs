@@ -50,6 +50,7 @@ namespace Patient_Record_System
                     home.Show();
                     home.label2.Text = "Using as: " + username.Text + "";
                     home.pInfoToolStripMenuItem.Enabled = true;
+                    home.logOutToolStripMenuItem.Enabled = true;
                     this.Hide();
                 }
                 else

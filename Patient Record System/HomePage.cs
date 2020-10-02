@@ -19,6 +19,7 @@ namespace Patient_Record_System
             
             InitializeComponent();
             pInfoToolStripMenuItem.Enabled = false;
+            logOutToolStripMenuItem.Enabled = false;
 
         }
         private void saadToolStripMenuItem_Click(object sender, EventArgs e) //opens the cv file stored on my pc. always chenge the file path when making changes to this block of code.
@@ -48,6 +49,7 @@ namespace Patient_Record_System
         private void timer1_Tick(object sender, EventArgs e) //displaying the current time and date.
         {
             toolStripStatusLabel1.Text = DateTime.Now.ToString();
+            toolStripStatusLabel1.ForeColor = Color.Black;
 
         }
 
@@ -67,13 +69,11 @@ namespace Patient_Record_System
             this.Hide();
         }
 
-        
-
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (pInfoToolStripMenuItem.Enabled == true)
+            if (pInfoToolStripMenuItem.Enabled == true && logOutToolStripMenuItem.Enabled == true)
             {
-
+                logOutToolStripMenuItem.Enabled = false;
                 pInfoToolStripMenuItem.Enabled = false;
                 label2.Text = "No User Active";
             }

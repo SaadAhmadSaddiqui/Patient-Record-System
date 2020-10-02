@@ -209,7 +209,6 @@ namespace Patient_Record_System
                 btnSave.Text = "Update";
                 tabControl.SelectedIndex = 0;
                 nCon.Close();
-
                 disp_Visits();
 
             }
